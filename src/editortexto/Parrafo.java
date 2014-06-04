@@ -13,10 +13,14 @@ public class Parrafo extends Compuesto{
 
 	@Override
 	public String dibujar(boolean tipo) {
+		String aux = null;
+		for(TextoAbstract v: this.getList()){
+			aux = v.dibujar(tipo);
+		}
 		if(tipo==true){
-			return this.getList();
+			return aux.toUpperCase();
 		}else{
-			return "";
+			return aux.toLowerCase();
 		}
 	}
 

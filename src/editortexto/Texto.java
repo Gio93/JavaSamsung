@@ -7,15 +7,22 @@ public class Texto extends Compuesto {
 		if(v.isTexto()==true){
 			throw new UnsupportedOperationException();
 		}else{
-			this.getCaracteres().add(v);
+			this.getList().add(v);
 		}
 		
 	}
 
 	@Override
 	public String dibujar(boolean tipo) {
-		// TODO Auto-generated method stub
-		return null;
+		String aux = null;
+		for(TextoAbstract v: this.getList()){
+			aux = v.dibujar(tipo);
+		}
+		if(tipo==true){
+			return aux.toUpperCase();
+		}else{
+			return aux.toLowerCase();
+		}
 	}
 
 	@Override
