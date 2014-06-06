@@ -1,8 +1,7 @@
 package personaObserver;
 
 import upm.jbb.IO;
-import Observer.ObservadorA;
-import Observer.ObservadorB;
+
 
 
 public final class MainObserver {
